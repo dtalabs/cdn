@@ -37,7 +37,7 @@ jobs:
     secrets: inherit
     uses: dtalabs/ci-cd/.github/workflows/helm-deployment.yaml@main
     with:
-      helm_chart_dir: 'add-ons/cdn'
+      helm_chart_dir: 'apps/cdn'
       namespace: 'dtalabs'
       values_file: 'prod.values.yaml'
       deployment_name: 'cdn'
