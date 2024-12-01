@@ -32,12 +32,12 @@ jobs:
       - name: Log out from GitHub Container Registry
         run: docker logout ghcr.io
 
-  deploy-cdn:
-    needs: build-cdn
-    secrets: inherit
-    uses: dtalabs/ci-cd/.github/workflows/helm-deployment.yaml@main
-    with:
-      helm_chart_dir: 'apps/cdn'
-      namespace: 'dtalabs'
-      values_file: 'prod.values.yaml'
-      deployment_name: 'cdn'
+  # deploy-cdn:
+  #   needs: build-cdn
+  #   secrets: inherit
+  #   uses: dtalabs/ci-cd/.github/workflows/helm-deployment.yaml@main
+  #   with:
+  #     helm_chart_dir: 'apps/cdn'
+  #     namespace: 'dtalabs'
+  #     values_file: 'prod.values.yaml'
+  #     deployment_name: 'cdn'
